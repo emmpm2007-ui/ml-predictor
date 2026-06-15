@@ -1,0 +1,17 @@
+# Runtime (required)
+scikit-learn>=1.3
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+seaborn>=0.12
+joblib>=1.3
+
+# Optional performance boosters
+# xgboost>=2.0
+# lightgbm>=4.0
+# shap>=0.43
+
+# Development
+pytest>=7.0
+flake8>=5.0
+black>=23.0

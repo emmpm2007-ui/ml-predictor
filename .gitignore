@@ -1,0 +1,41 @@
+# Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific — trained models (can be large)
+*.pkl
+*.joblib
+
+# Generated reports and plots
+reporte_predictor/
+
+# Configuration with real paths (user-specific)
+config_predictor.json
+config_mma.json
+
+# Datasets — too large for git (download separately, see README)
+*.csv
+
+# pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build
+dist/
+build/
+*.egg-info/

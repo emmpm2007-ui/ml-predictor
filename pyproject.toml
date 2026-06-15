@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ml-predictor"
+version = "1.0.0"
+description = "Predictor universal de enfrentamientos deportivos con Machine Learning"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Emanuelle Perez Martinez", email = "emmpm2007@gmail.com"}]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "scikit-learn>=1.3",
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "matplotlib>=3.7",
+    "seaborn>=0.12",
+    "joblib>=1.3",
+]
+
+[project.optional-dependencies]
+boost = [
+    "xgboost>=2.0",
+    "lightgbm>=4.0",
+    "shap>=0.43",
+]
+dev = [
+    "pytest>=7.0",
+    "flake8>=5.0",
+    "black>=23.0",
+]
+
+[project.scripts]
+ml-predictor = "main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+[tool.isort]
+profile = "black"
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"]
